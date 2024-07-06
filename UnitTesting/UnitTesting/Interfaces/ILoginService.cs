@@ -12,6 +12,6 @@ namespace LoginServiceExample.Interfaces
     public interface ILoginService
     {
         Task<LoginResponseType> Login(string? email, string? password);
-        bool AttemptAutoLogin();
+        bool AutoLogin();
     }
 }

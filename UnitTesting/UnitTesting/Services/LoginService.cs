@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LoginServiceExample.Services
+namespace BudgetTracking.Services
 {
     public class LoginService(IWebClient webClient, ISecureStorage secureStorage) : ILoginService
     {
@@ -37,7 +37,7 @@ namespace LoginServiceExample.Services
             return LoginResponseType.Success;
         }
 
-        public bool AttemptAutoLogin()
+        public bool AutoLogin()
         {
             var secureLogin = secureStorage.GetSecureLogin();
 
